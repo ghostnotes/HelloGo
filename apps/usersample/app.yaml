@@ -1,0 +1,16 @@
+application: ghostnotest
+version: 7
+runtime: go
+api_version: 3
+
+handlers:
+- url: /required
+  script: _go_app
+  login: required
+
+- url: /admin
+  script: _go_app
+  login: admin
+
+- url: /.*
+  script: _go_app
